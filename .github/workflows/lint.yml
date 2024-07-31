@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+
+env:
+  TZ: Asia/Tokyo
+  NODE_VERSION: "18"
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Exec lint
+        run: npm run lint
