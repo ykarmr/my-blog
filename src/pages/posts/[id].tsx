@@ -27,12 +27,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const Post = ({ page, markdown }: { page: any; markdown: string }) => {
   return (
-    <article className="p-8">
-      <h1 className="mb-8 text-4xl font-bold text-primary">
+    <article className="prose dark:prose-invert w-full mx-auto">
+      <h2 className="mb-8 text-3xl font-bold text-primary">
         {page.properties.Name.title[0].plain_text}
-      </h1>
+      </h2>
       <Markdown
-        className="markdown"
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex]}
       >
