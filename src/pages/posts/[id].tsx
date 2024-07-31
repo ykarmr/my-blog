@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 const Post = ({ page, markdown }: { page: any; markdown: string }) => {
   return (
     <article className="p-8">
-      <h1 className="text-4xl font-bold mb-8 text-primary">
+      <h1 className="mb-8 text-4xl font-bold text-primary">
         {page.properties.Name.title[0].plain_text}
       </h1>
       <Markdown

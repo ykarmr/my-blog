@@ -8,14 +8,14 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <header className="fixed top-0 left-0 right-0 bg-primary p-4 shadow-lg z-50 opacity-80 flex justify-between items-center">
+    <div className="flex min-h-screen flex-col bg-background">
+      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-primary p-4 opacity-80 shadow-lg">
         <h1 className="text-2xl font-extrabold text-primary-foreground">
           <Link href={"/"}>YKARMR BLOG</Link>
         </h1>
         <ThemeToggle />
       </header>
-      <main className="flex-1 container mx-auto mt-20">{children}</main>
+      <main className="container mx-auto mt-20 flex-1">{children}</main>
     </div>
   );
 };
