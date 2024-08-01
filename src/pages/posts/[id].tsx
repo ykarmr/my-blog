@@ -45,7 +45,7 @@ const Post = ({
     <>
       <Meta pageTitle={title} pagePath={`/posts/${pageId}`} />
       <article className="prose mx-auto w-full dark:prose-invert ">
-        {tags.some((item) => item.name === "Notion AI") && (
+        {tags.some((item: any) => item.name === "Notion AI") && (
           <div className="rounded bg-red-100 p-4 text-red-700 dark:bg-red-900 dark:text-red-200">
             こちらの記事はNotion AIで作成されたものなので、
             <br />
