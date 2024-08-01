@@ -32,6 +32,7 @@ function Meta(props: Props) {
       <meta property="og:image:width" content={String(1280)} />
       <meta property="og:image:height" content={String(640)} />
       <link rel="canonical" href={url} />
+      <link rel="icon" href={`${baseURL}/favicon.webp`} key="icon" />
     </Head>
   );
 }
