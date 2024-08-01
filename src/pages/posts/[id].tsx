@@ -1,14 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getDatabase, getPage, notionToMd } from "@/lib/notion";
-import Markdown from "react-markdown";
-import rehypeKatex from "rehype-katex";
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
+
 import "katex/dist/katex.min.css";
 import { Badge } from "@/components/ui/badge";
 import Meta from "@/components/Meta";
-import rehypeToc from "rehype-toc";
-import rehypeSlug from "rehype-slug";
+import Markdown from "@/components/Markdown";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const database = await getDatabase();
@@ -64,12 +60,8 @@ const Post = ({
             ))}
           </div>
         )}
-        <Markdown
-          remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex, rehypeSlug, rehypeToc]}
-        >
-          {markdown}
-        </Markdown>
+
+        <Markdown markdown={markdown} />
       </article>
     </>
   );
