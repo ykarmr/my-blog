@@ -32,7 +32,7 @@ const Home = ({ posts }: { posts: any[] }) => {
                 {post.properties.Tags.multi_select.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {post.properties.Tags.multi_select.map((tag: any) => (
-                      <Badge key={tag.id} variant="outline">
+                      <Badge key={tag.id} variant="secondary">
                         {tag.name}
                       </Badge>
                     ))}
