@@ -9,7 +9,7 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
-      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-opacity-80 p-4 shadow-lg backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between p-4 opacity-80 shadow-lg backdrop-blur-md">
         <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
           <Link href={"/"}>YKARMR BLOG</Link>
         </h1>
