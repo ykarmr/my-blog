@@ -7,6 +7,8 @@ import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
 import { Badge } from "@/components/ui/badge";
 import Meta from "@/components/Meta";
+import rehypeToc from "rehype-toc";
+import rehypeSlug from "rehype-slug";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const database = await getDatabase();
@@ -54,7 +56,7 @@ const Post = ({
         )}
         <h2 className="text-3xl font-bold text-primary">{title}</h2>
         {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="mb-8 flex flex-wrap gap-2">
             {tags.map((tag: any) => (
               <Badge key={tag.id} variant="secondary">
                 {tag.name}
@@ -64,7 +66,7 @@ const Post = ({
         )}
         <Markdown
           remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex]}
+          rehypePlugins={[rehypeKatex, rehypeSlug, rehypeToc]}
         >
           {markdown}
         </Markdown>

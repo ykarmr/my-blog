@@ -1,0 +1,12 @@
+/* React Markdownの目次 */
+.toc {
+  @apply text-gray-900 border-2 border-gray-300 p-4 backdrop-blur-md rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300;
+}
+
+.toc ol {
+  @apply pl-8;
+}
+
+.toc ol li {
+  @apply relative pl-4 mb-2 text-gray-900 dark:text-gray-400;
+}
