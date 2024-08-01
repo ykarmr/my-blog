@@ -32,7 +32,7 @@ export const MdSyntaxHighlighter = (props: Props) => {
 
   return (
     <code
-      className="inline rounded bg-gray-200 p-1 font-mono text-sm before:content-none after:content-none"
+      className="inline rounded bg-gray-200 p-1 font-mono text-sm before:content-none after:content-none dark:bg-gray-500"
       {...props}
     >
       {children}
