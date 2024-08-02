@@ -18,13 +18,13 @@ function Markdown({ markdown }: Props) {
         "max-w-full",
         "prose dark:prose-invert",
         // Table overall styles
-        "prose-table:border-separate prose-table:rounded-lg prose-table:overflow-hidden prose-table:shadow-md",
+        "prose-table:border-separate prose-table:rounded-lg prose-table:shadow-md",
         "prose-table:border prose-table:border-gray-200 dark:prose-table:border-gray-700",
 
         // Table header styles
         "prose-th:bg-gray-100 dark:prose-th:bg-gray-800 prose-th:text-left prose-th:font-semibold",
         "prose-th:border prose-th:border-gray-200 dark:prose-th:border-gray-700",
-        "prose-th:px-6 prose-th:py-3",
+        "prose-th:px-6 prose-th:py-4",
 
         // Table data cell styles
         "prose-td:border prose-td:border-gray-200 dark:prose-td:border-gray-700",
